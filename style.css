@@ -1,0 +1,151 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+    --dark-Blue: hsl(240, 38%, 20%);
+    --grayish-Blue: hsl(240, 18%, 77%);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    background-image: url(./images/pattern-bg.svg), url(./images/pattern-curve.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 10% right, bottom;
+    background-size: auto, contain;
+    color: var(--dark-Blue);
+    padding: 30px;
+    overflow: hidden;
+
+}
+
+
+
+.flex {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.hidden {
+    display: none;
+}
+
+.person-img {
+    position: relative;
+    right: 50px;
+}
+
+.person-img img {
+    border-radius: 10px;
+}
+
+.quote-div {
+    z-index: 999;
+    position: relative;
+    left: 100px;
+    top: 100px;
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top left 30%;
+}
+
+.title {
+    font-size: 20px;
+    color: var(--grayish-Blue);
+    font-weight: 500;
+}
+
+strong {
+    color: var(--dark-Blue);
+}
+
+.btns {
+    z-index: 9999;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 1px 1px 5px;
+    width: 100px;
+    border-radius: 30px;
+    position: absolute; 
+    bottom: 70px;
+    right: 30%; 
+    transform: translateX(-50%);
+
+    
+
+
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.btn svg {
+    margin-left: 4px;
+}
+
+.attribution { 
+    font-size: 20px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+}
+.attribution a { 
+    color: rgb(116, 6, 116); 
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+
+@media screen and (max-width: 768px){
+    body {
+        overflow: scroll;
+        background-position: top -30px right -20px, 10%;
+        
+    }
+    .flex {
+        flex-direction: column;
+    }
+
+    .person-img img{
+        width: 400px;
+    }
+
+    .person-img {
+        position: relative;
+        right: 0px;
+        top: 80px;
+        
+    }
+
+    .btns {
+        bottom: 180px;
+    }
+
+    .quote-div {
+        position: relative;
+        left: 0px;
+        top: 200px;
+        text-align: center;
+    }
+    
+
+
+    .attribution {
+        position: relative;
+        top: 200px;
+        left: 10px;
+        
+    }
+}
+
